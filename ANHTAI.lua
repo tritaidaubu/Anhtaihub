@@ -7500,20 +7500,6 @@ spawn(function()
     end
 end)
 end
-
-    if World2 or World3 then
-    S:AddSeperator("Fragments")
-
-S:AddButton("Reset Stats (Use 2.5K Fragments)", function()
-    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
-    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","2")
-end)
-
-S:AddButton("Random Race (Use 3K Fragments)", function()
-	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")
-	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","2")
-end)
-end
 ----------------------------------------------------------------------------------------------------------------------------------------------
 Fluent:Notify({
     Title = "Delay 9S",
