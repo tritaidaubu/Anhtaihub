@@ -81,7 +81,7 @@ local Tabs = {
     Main = Window:AddTab({ Title = "Chính", Icon = "cherry" }),
     Setting = Window:AddTab({ Title = "Setting", Icon = "cherry" }),
     Stats = Window:AddTab({ Title = "Chỉ Số", Icon = "cherry" }),
-    Player = Window:AddTab({ Title = "Thành Viên", Icon = "cherry" }),
+    Player = Window:AddTab({ Title = "Người Chơi", Icon = "cherry" }),
     Teleport = Window:AddTab({ Title = "Đảo", Icon = "cherry" }),
     Fruit = Window:AddTab({ Title = "Trái Cây", Icon = "cherry" }),
     Raid = Window:AddTab({ Title = "Thức Tỉnh", Icon = "cherry" }),
@@ -7498,6 +7498,20 @@ spawn(function()
             end
         end
     end
+end)
+end
+
+    if World2 or World3 then
+    S:AddSeperator("Fragments")
+
+S:AddButton("Reset Stats (Use 2.5K Fragments)", function()
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","2")
+end)
+
+S:AddButton("Random Race (Use 3K Fragments)", function()
+	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")
+	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","2")
 end)
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------
