@@ -2600,7 +2600,7 @@ Tabs.info:AddParagraph({
     
 Dis:AddLabel("Script Auto Chest")
 Dis:AddButton("Copy Script", function()
-setclipboard("") 
+setclipboard(".") 
 end)    
 
 local Farming = Tabs.Main:AddSection("Farming")
