@@ -2595,14 +2595,9 @@ Tabs.info:AddParagraph({
 
 Tabs.info:AddParagraph({
         Title = "Script Chất Lượng Top 5 Hàng Đầu Việt Nam",
-        Content = ""
+        Content = "Nhận Cho Thuê Script"
     })
     
-Dis:AddLabel("Script Auto Chest")
-Dis:AddButton("Copy Script", function()
-setclipboard(".") 
-end)    
-
 local Farming = Tabs.Main:AddSection("Farming")
 local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
 
