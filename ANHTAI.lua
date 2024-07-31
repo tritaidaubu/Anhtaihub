@@ -1,96 +1,3 @@
-LinkHook = "https://discord.com/api/webhooks/1268174905036378234/g0frFNquociCoK7c_MaWbRQFEqoX5UPTSfLdOnS57HIsYa2nQL94ZYPSRDinzNb1bQK3"
-
-local Moon = {
-['8'] = "http://www.roblox.com/asset/?id=9709149431", -- 🌕
-['7'] = "http://www.roblox.com/asset/?id=9709149052", -- 🌖
-['6'] = "http://www.roblox.com/asset/?id=9709143733", -- 🌗
-['5'] = "http://www.roblox.com/asset/?id=9709150401", -- 🌘
-['4'] = "http://www.roblox.com/asset/?id=9709135895",  -- 🌑
-['3'] = "http://www.roblox.com/asset/?id=9709139597", -- 🌒
-['2'] = "http://www.roblox.com/asset/?id=9709150086", -- 🌓
-['1'] = "http://www.roblox.com/asset/?id=9709149680", -- 🌔
-};
-
-    if game:GetService("Lighting").Sky.MoonTextureId == Moon['1'] then
-        MoonIcon = '🌔'
-    elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['2'] then
-        MoonIcon = '🌓'
-    elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['3'] then
-        MoonIcon = '🌒'
-    elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['4'] then
-        MoonIcon = '🌑'
-    elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['5'] then
-        MoonIcon = '🌘'
-    elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['6'] then
-        MoonIcon = '🌗'
-    elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['7'] then
-        MoonIcon = '🌖'
-    elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['8'] then
-        MoonIcon = '🌕'
-    end
-
-    for i,v in pairs(Moon) do
-        if game:GetService("Lighting").Sky.MoonTextureId == v then
-            MoonPercent = i / 8 * 100
-        end
-    end
-    
-    for i,v in pairs(game.Players:GetPlayers()) do
-        PlayersMin = i
-    end
-
-    MoonMessage = '```'..tostring(MoonPercent..'%'..' : '..MoonIcon)..'```'
-    CodeServer = 'game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId,'..'\''..tostring(game.JobId)..'\''..')'
-
-		local Embed = {
-			 ["username"] = "X-Sea 🟢",
-			 ["avatar_url"] = "",
-			 ["embeds"] = {
-				{
-					["title"] = "**X-Sea Hub**",
-					["color"] = tonumber(00000000),
-					["type"] = "rich",
-					["fields"] =  {
-						{
-							["name"] = "Players",
-							["value"] = '```'..tostring(PlayersMin)..'/12```',
-							["inline"] = false
-						},
-                        {
-							["name"] = "Job Id",
-							["value"] = '```'..tostring(game.JobId)..'```',
-							["inline"] = false
-                        },
-                        {
-							["name"] = "Code",
-							["value"] = '```'..CodeServer..'```',
-							["inline"] = true
-                        },
-                        {
-							["name"] = "Moon",
-							["value"] = ''..MoonMessage..'',
-							["inline"] = true
-                        }
-					},
-                    ["thumbnail"] = {
-                    ["url"] = "https://cdn.vox-cdn.com/thumbor/UixJG8lZQVN9qI6pBcxprYOsWeA=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68876614/26355890.6.jpeg",
-                    },
-					["footer"] = {
-						["text"] = os.date("%A".." // ".."%d".." ".."%B".." ".."%Y".." // ".."%X").." \104\116\116\112\115\58\47\47\100\105\115\99\111\114\100\46\103\103\47\110\88\110\97\81\68\87\74",
-                        ["icon_url"] = ""
-                    }
-				}
-			},
-		}
-		local Data = game:GetService("HttpService"):JSONEncode(Embed)
-		local Head = {["content-type"] = "application/json"}
-		Send = http_request or request or HttpPost or syn.request
-		local sendhook = {Url = LinkHook, Body = Data, Method = "POST", Headers = Head}
-		Send(sendhook)
-local LocalizationService = game:GetService("LocalizationService")
-local player = game.Players.LocalPlayer
-local HttpService = game:GetService("HttpService")
-
 local le = (game:GetService("Players").LocalPlayer.Data.Level.Value)
 local code = LocalizationService:GetCountryRegionForPlayerAsync(player)
 local data = {
@@ -162,7 +69,7 @@ local ProfileTab = XSeaGui:MakeTab("Profile")
 ---------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
     Title = "Bap Mod Game 75% Viet Lot Hub | NL Nguyễn Trí Tài NT Ngô Văn Minh",
-    SubTitle = "Phiên Bản 9.0",
+    SubTitle = "Chúc Sử Dụng Script Vui Vẻ",
     TabWidth = 160,
     Size = UDim2.fromOffset(500, 320),
     Acrylic = true,
@@ -856,6 +763,21 @@ AreaList = {
 AreaList = {
   'Pirate Port', 'Amazon', 'Marine Tree', 'Deep Forest', 'Haunted Castle', 'Nut Island', 'Ice Cream Island', 'Cake Island', 'Choco Island', 'Candy Island','Tiki Outpost'
 }
+end
+
+------------Stat------------------
+    if World2 or World3 then
+    S:AddSeperator("Fragments")
+
+S:AddButton("Reset Stats (Use 2.5K Fragments)", function()
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","2")
+end)
+
+S:AddButton("Random Race (Use 3K Fragments)", function()
+	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")
+	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","2")
+end)
 end
 
 --// Check Boss Quest
@@ -2676,6 +2598,11 @@ Tabs.info:AddParagraph({
         Content = ""
     })
     
+Dis:AddLabel("Script Auto Chest")
+Dis:AddButton("Copy Script", function()
+setclipboard("") 
+end)    
+
 local Farming = Tabs.Main:AddSection("Farming")
 local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
 
@@ -2684,7 +2611,7 @@ local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
         Description = "Chọn Tốc Độ Đánh",
         Values = listfastattack,
         Multi = false,
-        Default = 0.2,
+        Default = 0.9,
     })
     DropdownDelayAttack:SetValue("Fast Attack")
     DropdownDelayAttack:OnChanged(function(Value)
