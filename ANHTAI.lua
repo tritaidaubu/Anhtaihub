@@ -47,7 +47,7 @@ local data = {
                 },
                 {
                     name = "sᴛᴀᴛᴜs",
-                    value = "```HYDROGEN H/2 ON TOP```",
+                    value = "```Nhận Cho Thuê Script By Nguyễn Trí Tài```",
                     inline = true
                 }
             }
@@ -70,21 +70,21 @@ else
 end
 local XSeaLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XRayDerxDOne/LoaderrMainX/main/Source.lua.txt"))()
 local Notify = XSeaLib:Notify({
-	["Title"] = "X-Sea Hub ",
+	["Title"] = "Bap Mod GameHub ",
 	["Description"] = "New Library",
 	["Color"] = Color3.fromRGB(127.00000002980232, 146.00000649690628, 242.00000077486038),
-	["Content"] = "Welcome to X-Sea Hub",
+	["Content"] = "Welcome to Bap Mod Game Hub",
 	["Time"] = 1,
 	["Delay"] = 10
 })
 local XSeaGui = XSeaLib:Start({
-    ["Name"] = "X-Sea Hub",
+    ["Name"] = "Bap Mod Game Hub",
     ["Description"] = "New Ui",
     ["Info Color"] = Color3.fromRGB(5.000000176951289, 59.00000028312206, 113.00000086426735),
     ["Logo Info"] = "rbxassetid://17851124858",
-    ["Logo Player"] = "rbxassetid://17851124858",
-    ["Name Info"] = "X-Sea Hub Info",
-    ["Name Player"] = "Test",
+    ["Logo Player"] = "rbxassetid://18735998414",
+    ["Name Info"] = "Bap Mod Game Hub Info",
+    ["Name Player"] = "Min Gaming",
     ["Info Description"] = "Hihi",
     ["Tab Width"] = 135,
     ["Color"] = Color3.fromRGB(127.00000002980232, 146.00000649690628, 242.00000077486038),
@@ -185,9 +185,8 @@ local Dropdown = Section:Dropdown({
     end
 })
 local ProfileTab = XSeaGui:MakeTab("Profile")
-----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "HYDROGEN H/2 75% Viet Lot Hub | By Nguyễn Trí Tài",
+    Title = "Bap Mod Game 75% Viet Lot Hub | NL Nguyễn Trí Tài NT Ngô Văn Minh",
     SubTitle = "Phiên Bản 9.0",
     TabWidth = 160,
     Size = UDim2.fromOffset(500, 320),
@@ -2676,7 +2675,7 @@ ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton.Size = UDim2.new(0, 50, 0, 50)
 ImageButton.Draggable = true
-ImageButton.Image = "http://www.roblox.com/asset/?id=17094709022"
+ImageButton.Image = "http://www.roblox.com/asset/?id=18735998414"
 ImageButton.MouseButton1Down:connect(function()
     game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)
 end)
@@ -2694,16 +2693,11 @@ end
 --Create Tabs
 Tabs.info:AddParagraph({
         Title = "Owner",
-        Content = "! Tai Siu"
+        Content = "Bap Mod Game"
     })
 
 Tabs.info:AddParagraph({
-        Title = "Upadate",
-        Content = "Version 3.1"
-    })
-    
- Tabs.info:AddParagraph({
-        Title = "Chất Lượng Hàng Đầu",
+        Title = "Script Chất Lượng Top 5 Hàng Đầu Việt Nam",
         Content = ""
     })
     
@@ -2715,7 +2709,7 @@ local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
         Description = "Chọn Tốc Độ Đánh",
         Values = listfastattack,
         Multi = false,
-        Default = 0.1,
+        Default = 0.2,
     })
     DropdownDelayAttack:SetValue("Fast Attack")
     DropdownDelayAttack:OnChanged(function(Value)
@@ -7575,7 +7569,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
             Hop()
             Fluent:Notify({
-                Title = "Fai Fao Hub",
+                Title = "Tri Minh Hub",
                 Content = "Turn Off Find Full Moon...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7583,7 +7577,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
             Hop()
             Fluent:Notify({
-                Title = "Fai Fao Hub",
+                Title = "Tri Minh Hub",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7591,7 +7585,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
             Hop()
             Fluent:Notify({
-                Title = "Fai Fao Hub",
+                Title = "Tri Minh Hub",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7626,8 +7620,8 @@ end)
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------
 Fluent:Notify({
-    Title = "Developer X-sea OFFICAL",
+    Title = "Delay 9S",
     Content = "The script has been loaded.",
     Durtion = 9
 })
-warn("SUPPORT SERVER DISCORD https://discord.com/invite/SVmt8hUBzR! My Nick Name ! Béo Biên Hòa")
+warn("SUPPORT SERVER DISCORD https://discord.com/invite/SVmt8hUBzR! Nhận Cho Thuê Script")
